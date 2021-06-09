@@ -66,7 +66,13 @@ public class Persona implements Serializable {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad < 122) {
+            this.edad = edad;
+        } else {
+            System.out.println("Error de edad");
+            // lanzar una Excepcion Java.
+        }
+        
     }
 
     @Override
